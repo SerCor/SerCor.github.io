@@ -174,22 +174,19 @@ THREEx.Portal360.prototype._buildOutsideMesh = function(texture360, doorWidth, d
 	// var radius360Sphere = 1
 
 	// build half sphere geometry
-	// var geometry = new THREE.SphereGeometry( radius360Sphere, 16, 16, Math.PI, Math.PI, 0, Math.PI).rotateZ(Math.PI)
-	const geometry = new THREE.SphereGeometry( 15, 32, 16 );
+	var geometry = new THREE.SphereGeometry( radius360Sphere, 16, 16, Math.PI, Math.PI, 0, Math.PI).rotateZ(Math.PI)
 	// fix UVs
 	// geometry.faceVertexUvs[0].forEach(function(faceUvs){
 	// 	faceUvs.forEach(function(uv){
 	// 		uv.x /= 2
 	// 	})
 	// })
-	// geometry.uvsNeedUpdate = true
-	// var material = new THREE.MeshBasicMaterial( {
-	// 	map: texture360,
-	// 	// opacity: 0.9,
-	// 	side: THREE.BackSide,
-	// });
-	const material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
-
+	geometry.uvsNeedUpdate = true
+	var material = new THREE.MeshBasicMaterial( {
+		map: texture360,
+		// opacity: 0.9,
+		side: THREE.BackSide,
+	});
 	// var geometry = new THREE.SphereGeometry( radius360Sphere, 16, 16);
 	// var material = new THREE.MeshNormalMaterial()
 	var sphere360Mesh = new THREE.Mesh( geometry, material );
