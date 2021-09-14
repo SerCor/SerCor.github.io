@@ -2831,13 +2831,13 @@ ARjs.Profile.prototype.reset = function () {
     }
 
     this.contextParameters = {
-        cameraParametersUrl: THREEx.ArToolkitContext.baseURL + '../data/data/camera_para.dat',
+        cameraParametersUrl: THREEx.ArToolkitContext.baseURL + '../ra_viewer/data/camera_para.dat',
         detectionMode: 'mono',
         labelingMode: "black_region"
     }
     this.defaultMarkerParameters = {
         type: 'pattern',
-        patternUrl: THREEx.ArToolkitContext.baseURL + '../data/data/patt.hiro',
+        patternUrl: THREEx.ArToolkitContext.baseURL + '../ra_viewer/data/patt.hiro',
         changeMatrixMode: 'modelViewMatrix',
     }
     return this
